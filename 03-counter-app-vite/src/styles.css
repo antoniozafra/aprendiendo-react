@@ -1,0 +1,11 @@
+body {
+    background-color: #21232a;
+    color: white;
+    font-size: 25px;
+    padding: 70px;
+}
+
+body button {
+    padding: 10px 20px;
+    margin: 5px;
+}
