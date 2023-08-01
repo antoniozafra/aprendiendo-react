@@ -8,6 +8,8 @@ export const GifExpertApp = () => {
    
     const onAddCategory = ( newCategory ) => {
 
+        if(categories.includes(newCategory)) return;
+
         // setCategories([...categories, "Valorant"]);
         setCategories(cat => [...cat, newCategory]);                                           
 
@@ -20,13 +22,13 @@ export const GifExpertApp = () => {
 
         {/* INPUT */}
         <AddCategory
-        onNewCategory={ value => onAddCategory(value) }
-        //  setCategories={setCategories}
-          />
+            onNewCategory={ value => onAddCategory(value) }
+            //  setCategories={setCategories}
+        />
         
         {/* LISTADO DE GIF */}
         <ol>
-            {categories.map(category => {
+            {categories.map( (category) => {
                 return <li key={category}>{category}</li>
             })}
         </ol>
