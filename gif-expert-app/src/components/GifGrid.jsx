@@ -1,7 +1,11 @@
 import React from 'react'
+import { getGifs } from '../helpers/getGifs';
+
+
 
 const GifGrid = ({category}) => {
-    const gifs = [1,2,3,4,5];
+
+    getGifs(category);
 
   return (
     <>
