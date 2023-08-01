@@ -8,6 +8,6 @@ import { FirstApp } from './FirstApp';
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
         {/* <CounterApp value={10} /> */}
-        <FirstApp title ="Este es el titulio"/>
+        <FirstApp title ="Hola, soy Antonio"/>
     </React.StrictMode>
 );
