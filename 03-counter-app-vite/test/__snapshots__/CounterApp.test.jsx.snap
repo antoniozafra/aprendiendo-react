@@ -14,7 +14,9 @@ exports[`Pruebas en el componente <CounterApp/> Debe de hacer match con el snaps
   <button>
     -1
   </button>
-  <button>
+  <button
+    aria-label="btn-reset"
+  >
     Reset
   </button>
 </div>

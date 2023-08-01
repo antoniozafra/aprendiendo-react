@@ -14,9 +14,9 @@ export const CounterApp = ({ value }) => {
   }
 
   const handdleSubstract = () => {
-    if (counter == value) {
-      return
-    }
+    // if (counter == value) {
+    //   return
+    // }
 
     setCounter(counter - 1);
   }
@@ -32,7 +32,7 @@ export const CounterApp = ({ value }) => {
 
       <button onClick={handdleAdd}>+1</button>
       <button onClick={handdleSubstract}>-1</button>
-      <button onClick={handdleReset}>Reset</button>
+      <button aria-label="btn-reset" onClick={handdleReset}>Reset</button>
     </>
   );
 }
