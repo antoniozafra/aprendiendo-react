@@ -8,8 +8,8 @@ export const GifExpertApp = () => {
    
     const onAddCategory = () => {
 
-    // setCategories([...categories, "Valorant"]);
-    setCategories(cat => [...cat, 'Valorant']);                                           
+        // setCategories([...categories, "Valorant"]);
+        setCategories(cat => [...cat, 'Valorant']);                                           
 
     }
     
@@ -19,7 +19,7 @@ export const GifExpertApp = () => {
         <h1>GifExpertApp</h1> 
 
         {/* INPUT */}
-        <AddCategory/>
+        <AddCategory setCategories={setCategories} />
         
         {/* LISTADO DE GIF */}
         <ol>
