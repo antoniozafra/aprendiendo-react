@@ -6,7 +6,8 @@ export const FirstApp = ( {title, subtitle, name} ) => {
     return (
         //Return a Fragment
         <>
-            <div data-testid="test-title">{title}</div>
+            <h1 data-testid="test-title">{title}</h1>
+            <p>{subtitle}</p>
             <p>{subtitle}</p>
             <p>{name}</p>
         </>
