@@ -6,6 +6,7 @@ export const FirstApp = ( {title, subtitle, name} ) => {
     return (
         //Return a Fragment
         <>
+        
             <h1 data-testid="test-title">{title}</h1>
             <p>{subtitle}</p>
             <p>{subtitle}</p>
@@ -27,3 +28,4 @@ FirstApp.defaultProps = {
     name: ' Antonio z',
     // title : 'No hay titulo'
 }
+
