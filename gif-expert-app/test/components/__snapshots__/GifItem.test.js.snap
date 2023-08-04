@@ -7,7 +7,7 @@ exports[`Pruebas en el componentes GifItem Debe de hacer match con el snapshot 1
   >
     <img
       alt="Titulo de ejemplo"
-      src="https://www.example.com"
+      src="https://www.example.com/"
     />
     <p>
       Titulo de ejemplo
