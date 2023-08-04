@@ -45,7 +45,6 @@ describe('Pruebas en el componentes GifGrid', () => {
 
         expect(screen.getAllByRole('img').length).toBe(2);
 
-
     });
     
     
