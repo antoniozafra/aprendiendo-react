@@ -1,9 +1,12 @@
 import React from 'react'
-import useFetch from '../hooks/useFetch';
+import {useFetch} from '../hooks/';
+
+import { Quote, LoadingQuote } from '../03-examples';
+
 
 
 const MultipleCustomHooks = () => {
-    const { data, isLoading, hasError } = useFetch('https://api.breakingbadquotes.xyz/v1/quotes');
+    const { data, isLoading, hasError, getFetch } = useFetch('https://api.breakingbadquotes.xyz/v1/quotes');
     
     const {quote, author} = !!data && data[0];
 
@@ -15,22 +18,21 @@ const MultipleCustomHooks = () => {
 
             {
                 (isLoading)
-                    ? (<div className='alert alert-info text-center'>
-                        Cargando...
-                    </div>)
+                    ? (
+                        <LoadingQuote/>
+                    )
                     : (
-                        <blockquote className='blockquote text-end'>
-                            <p className='mb-1'>{quote}</p>
-                            <footer className='blockquote-footer'>{author}</footer>
-                        </blockquote>
-
+                        <Quote quote={quote} author={author}/>                       
                     )
             }
 
-            <button className='btn btn-primary'>Next Quote</button>
+
+
+            <button disabled={isLoading} className='btn btn-primary' onClick={getFetch}>Next Quote</button>
+
 
         </>
     )
 }
 
-export default MultipleCustomHooks
+export default MultipleCustomHooks 
