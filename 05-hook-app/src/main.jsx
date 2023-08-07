@@ -10,6 +10,7 @@ import { Layout } from './05-useLayoutEffect/Layout'
 import Memorize from './06-memos/Memorize'
 import { MemoHook } from './06-memos/MemoHook'
 import { CallbackHooks } from './06-memos/CallbackHooks'
+import './08-useReducer/intro-reducer';
 
 
 
@@ -21,9 +22,9 @@ import { CallbackHooks } from './06-memos/CallbackHooks'
 
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+// ReactDOM.createRoot(document.getElementById('root')).render(
 
-  // <React.StrictMode>
-    <CallbackHooks />
-  // </React.StrictMode>,
-)
+//   // <React.StrictMode>
+//     <CallbackHooks />
+//   // </React.StrictMode>,
+// )
