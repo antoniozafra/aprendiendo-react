@@ -51,15 +51,9 @@ describe('Pruebas en todoReducer', () => {
         };
 
         const newState = todoReducer(initialState, action);
-
         expect(newState[0].done).toBe(true);
-
-
-
-
+        
     });
-    
-    
     
     
 });
