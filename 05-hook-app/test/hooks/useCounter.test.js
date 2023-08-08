@@ -1,6 +1,7 @@
 
-import {renderHook} from '@testing-library/react'
+import {act, fireEvent, renderHook} from '@testing-library/react'
 import { useCounter } from "../../src/hooks/useCounter";
+import { unstable_renderSubtreeIntoContainer } from 'react-dom';
 
 describe('Pruebas en el hook useCounter', () => {
   
@@ -25,7 +26,57 @@ describe('Pruebas en el hook useCounter', () => {
         const {counter} = result.current;
 
         expect(counter).toBe(100);
-    })
+    });
+
+
+    
+    test('Debe de incrementar el contador', () => {
+      
+        const {result} = renderHook( () => useCounter() );
+        const {counter, increment} = result.current;
+
+        //Llamamos al 'act' para ejecutar la accion
+        act(() => {
+            increment();
+        });
+
+        //Llamamos al valor actualizado del counter
+        expect(result.current.counter).toBe(11);
+
+    });
+
+
+    test('Debe de decrementar el contador', () => {
+      
+        const {result} = renderHook( () => useCounter() );
+        const {counter, decrement} = result.current;
+
+        //Llamamos al 'act' para ejecutar la accion
+        act(() => {
+            decrement();
+        });
+
+        //Llamamos al valor actualizado del counter
+        expect(result.current.counter).toBe(9);
+
+    });
+
+    test('Debe de resetear el contador', () => {
+      
+        const {result} = renderHook( () => useCounter() );
+        const {counter, reset, increment} = result.current;
+
+        //Llamamos al 'act' para ejecutar la accion
+        act(() => {
+            increment();
+            reset();
+        });
+
+        //Llamamos al valor actualizado del counter
+        expect(result.current.counter).toBe(10);
+
+    });
+    
     
     
 
