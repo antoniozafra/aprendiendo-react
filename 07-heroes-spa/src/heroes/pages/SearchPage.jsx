@@ -37,7 +37,7 @@ export const SearchPage = () => {
       <h1>Search Page</h1>
       <hr />
 
-      <div className="row">
+      <div className="row  animate__animated animate__fadeIn">
 
 
         <div className="col-5">
@@ -53,18 +53,9 @@ export const SearchPage = () => {
           <h4>Resultados</h4>
           <hr />
 
-          {/* {
-            (q === '' )
-            ? <div className='alert alert-primary'>Search a hero</div>
-            : (heroes.length === 0) 
-            && <div className='alert alert-danger'>Sin resultados with <strong>{q}</strong></div>
-          } */}
-
           <div className='alert alert-primary' style={{display:showSearch ? '' : 'none'}}>Search a hero</div>
 
           <div className='alert alert-danger' style={{display: showError ? '' : 'none'}}>Sin resultados with <strong>{q}</strong></div>
-
-
 
           {
             heroes.map(hero => (
