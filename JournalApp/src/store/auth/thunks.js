@@ -4,9 +4,11 @@ import { clearNotesLogout, setNotes } from '../journal/journalSlice';
 import { checkingCredentials, logout, login } from './';
 
 export const checkingAuthentication = () => {
+
     return async( dispatch ) => {
         dispatch( checkingCredentials() );
     }
+    
 }
 
 
